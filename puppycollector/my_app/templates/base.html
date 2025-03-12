@@ -6,29 +6,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/puppy_friends.jpg' %}" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-     <title>Puppy Collector</title>
+    <title>Puppy Collector</title>
     {% block head %}
-
     {% endblock %}
   </head>
   <body>
     <header>
       <div class="header-logo-container">
-        <a href="/"><img src="" alt="The Puppy Collector Logo" /></a>
+        <a href="/"><img src="{% static 'images/puppy_friends.jpg' %}" alt="The Puppy Collector Logo" /></a>
       </div>
       <nav>
         <ul>
-          <li>
-            <a href="/about">About</a>
-          </li>
-        </ul>
+          <li><a href="{% url 'puppy_index' %}">All Puppies</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+         </ul>
       </nav>
     </header>
     <main>
       {% block content %}
-
       {% endblock %}
     </main>
   </body>

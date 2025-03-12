@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/puppies/puppy-index.css' %}"/>
+{% endblock %} 
+{% block content %}
+
+<section class="page-header">
+  <h1>Puppy List</h1>
+  <img src="{% static 'images/happy_puppy.jpeg' %}" alt="A happy puppy" />
+  <img src="{% static 'images/puppy_ice_cream.jpg' %}" alt="An icecream puppy" />
+  <img src="{% static 'images/puppy_in_a_cone.jpg' %}" alt="A puppy in a cone" />
+  <img src="{% static 'images/Puppy_large_coffee.jpg' %}" alt="A puppy and coffee" />
+</section>
+
+<section class="card-container">
+  {% for puppy in puppies %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          <img
+            src="{% static 'images/Puppy_small_coffee.jpg' %}"
+            alt="A coffee puppy"
+          />
+        </div>
+        <h2 class="card-title">{{ puppy.name }}</h2>
+        {% if puppy.age > 0 %}
+        <p>A {{ puppy.age }} year old {{ puppy.breed }}</p>
+        {% else %}
+        <p>A {{ puppy.breed }} puppy.</p>
+        {% endif %}
+        <p><small>{{ puppy.description }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}

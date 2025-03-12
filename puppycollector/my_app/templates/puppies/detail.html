@@ -1,0 +1,19 @@
+<!-- puppies/detail.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/puppies/puppy-detail.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="puppy-container">
+  <div class="puppy-img">
+    <img src="{% static 'images/puppy_in_a_cone.jpg' %}" alt="{{ puppy.name }}" />
+  </div>
+  <div class="puppy-details">
+    <h1>{{ puppy.name }}</h1>
+    <h2>{{ puppy.breed }} puppy</h2>
+    <p>{{ puppy.description }}</p>
+  </div>
+</section>
+{% endblock %}

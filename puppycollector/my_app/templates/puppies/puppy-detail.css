@@ -1,0 +1,56 @@
+.puppy-container {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .puppy-img {
+    width: 75%;
+    max-width: 350px;
+  }
+  
+  .puppy-img img {
+    width: 100%;
+    border-radius: var(--card-border-radius);
+  }
+  
+  .puppy-details {
+    width: 98%;
+    text-align: center;
+  }
+  
+  .puppy-details h1 {
+    font-size: var(--font-xxl);
+    margin: 15px 0 3px;
+  }
+  
+  .puppy-details h2 {
+    font-size: var(--font-xl);
+    margin-bottom: 10px;
+  }
+  
+  .puppy-details p {
+    font-size: var(--font-reg);
+    margin: 5px 0;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .puppy-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+    }
+  
+    .puppy-img {
+      width: 25%;
+      max-width: 250px;
+      margin-right: 25px;
+    }
+  
+    .puppy-details {
+      text-align: left;
+    }
+  }
+  
